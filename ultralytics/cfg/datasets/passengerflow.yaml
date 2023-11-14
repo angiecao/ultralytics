@@ -1,0 +1,23 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# Argoverse-HD dataset (ring-front-center camera) http://www.cs.cmu.edu/~mengtial/proj/streaming/ by Argo AI
+# Example usage: yolo train data=Argoverse.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── ZDSpassengerflow  ← downloads here (31.5 GB)
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /mnt/d/workspace/ultralytics/datasets/ZDSpassengerflow  # dataset root dir
+train: images/train/  # train images (relative to 'path') 39384 images
+val: images/val/  # val images (relative to 'path') 15062 images
+test: images/val/  # test images (optional) https://eval.ai/web/challenges/challenge-page/800/overview
+
+# Classes
+names:
+  0: head
+  1: blue_BH_badge
+  2: white_BH_badge
+  3: blue_XP_badge
+  4: white_XP_badge
+  5: black_XP_badge
